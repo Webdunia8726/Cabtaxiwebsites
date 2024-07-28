@@ -222,8 +222,29 @@ a{
 
 /* media query */
 @media only screen and (max-width: 600px) {
-    .box {
-      width: 100%;
-      padding: 0px;
+    .bgtestmonial{
+        padding: 10px;
+     
     }
+    .sectioncall{
+        background-color: #f7c019;
+        padding: 40px;
+    }
+    .sectioncall h1{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .sectioncall h2{
+        font-weight: 900;
+        font-size: 50px;
+    }
+    .box{
+        background-color: white;
+        color: black;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
   }
