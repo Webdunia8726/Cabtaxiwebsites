@@ -3,6 +3,9 @@
     width: 100px;
     height: 50px;
 }
+.img-logo{
+    width: 200px;
+}
 .navbar-custom {
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
 }
@@ -36,7 +39,7 @@
     background-color: white;
     color: black;
     width: 400px;
-    height: 300px;
+    height: 250px;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -248,3 +251,77 @@ a{
     }
     
   }
+/* General button styling */
+.whatsapp-button, .call-button {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    z-index: 1000; /* Ensure it's above other elements */
+    font-size: 24px; /* Icon size */
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Vertically center the icon */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* WhatsApp button (Left side) */
+.whatsapp-button {
+    left: 20px; /* Distance from the left side */
+    background-color: #25D366; /* WhatsApp green color */
+}
+
+/* Call button (Right side) */
+.call-button {
+    right: 20px; /* Distance from the right side */
+    background-color: #007bff; /* Bootstrap primary blue color */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .whatsapp-button, .call-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px; /* Smaller icon size */
+        line-height: 40px; /* Adjust line height */
+        bottom: 15px; /* Adjust position for mobile */
+    }
+}
+
+
+/* Base styling */
+.cities {
+    display: inline-block;
+    position: relative;
+}
+
+.city {
+    color: green !important;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Keyframes for changing cities with enhanced effects */
+@keyframes changeCity {
+    0% { opacity: 0; transform: translateY(20px); }
+    15% { opacity: 1; transform: translateY(0); }
+    35% { opacity: 1; }
+    50% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 0; }
+}
+
+/* Apply the animation to each city */
+.cities .city:nth-child(1) {
+    animation: changeCity 9s linear infinite 0s;
+}
+
+.cities .city:nth-child(2) {
+    animation: changeCity 9s linear infinite 3s;
+}
+
+.cities .city:nth-child(3) {
+    animation: changeCity 9s linear infinite 6s;
+}
+
